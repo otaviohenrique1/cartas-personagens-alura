@@ -3,15 +3,15 @@ export class Personagem {
   vida;
   mana;
   level;
-  tipo;
+  // tipo;
   descricao;
 
-  constructor(nome, vida, mana, level, tipo, descricao) {
+  constructor(nome, vida, mana, level, /* tipo, */ descricao) {
     this.nome = nome;
-    this.vida = vida;
-    this.mana = mana;
+    this.vida = 100;
+    this.mana = 100;
     this.level = level;
-    this.tipo = tipo;
+    // this.tipo = tipo;
     this.descricao = descricao;
   }
 

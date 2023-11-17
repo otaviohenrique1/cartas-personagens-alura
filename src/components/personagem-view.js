@@ -1,6 +1,6 @@
 export class PersonagemView {
     personagens;
-    
+
     constructor(personagens) {
         this.ulPersonagens = document.querySelector('ul#personagens');
         this.personagens = personagens;
@@ -13,18 +13,18 @@ export class PersonagemView {
             this.ulPersonagens.appendChild(personagemLI)
         })
     }
-    
+
     criaPersonagem = (personagem) => {
         const personagemLI = document.createElement('li')
         personagemLI.classList.add('personagem', personagem.tipo)
-    
+
         //const estaSelecionado = this.personagensSelecionados.indexOf(personagem) !== -1 //sintaxe para quando encontra no array
-    
+
         //if (estaSelecionado) personagemLI.classList.add('selecionado')
-    
+
         personagemLI.innerHTML =
-    
-        `
+
+            `
         <div class="container-superior">
             <div class="cabecalho">
                 <div class="combate"></div>
@@ -51,11 +51,11 @@ export class PersonagemView {
             <img src="./src/assets/img/icone-mana.png" class="icone-mana">
             <p class="insignia">${personagem.obterInsignia()}</p>
             <img src="./src/assets/img/icone-vida.png" class="icone-vida">
-            <h4 class="mana"></h4>
-            <h4 class="vida"></h4>
+            <h4 class="mana">${personagem.mana}</h4>
+            <h4 class="vida">${personagem.vida}</h4>
         </div>
         `
-    
+
         /*const containerLevel = personagemLI.querySelector('.level')
         containerLevel.onclick = (evt) => {
             evt.stopPropagation()
@@ -66,8 +66,8 @@ export class PersonagemView {
     
             this.render()
         }*/
-    
-    
+
+
         /*personagemLI.onclick = () => {
             const jaTem2Selecionados = this.personagensSelecionados.length === 2
             if (!jaTem2Selecionados || estaSelecionado) {
@@ -78,11 +78,11 @@ export class PersonagemView {
                 this.removeSelecao(personagem)
             }
         }*/
-    
+
         return personagemLI
     }
-    
-    
+
+
     /*adicionaSelecao = (personagem) => {
         this.personagensSelecionados.push(personagem)
         this.render()
@@ -111,3 +111,4 @@ export class PersonagemView {
         })
     }*/
 }
+
